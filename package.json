@@ -1,0 +1,74 @@
+{
+  "name": "ui-components",
+  "version": "1.0.0",
+  "description": "Reusable UI Components",
+  "main": "index.js",
+  "author": "Darren Belding <darren.belding@space48.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 4848 -s src",
+    "build-storybook": "build-storybook -s src",
+    "test": "jest",
+    "build": "webpack --config ./build/webpack.config.js --mode production"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,scss,css,pcss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@storybook/addon-a11y": "^5.1.9",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-info": "^5.1.9",
+    "@storybook/addon-storysource": "^5.1.9",
+    "@storybook/addon-viewport": "^5.1.9",
+    "@storybook/html": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "@types/jest": "^24.0.15",
+    "@types/react": "^16.8.22",
+    "@types/react-dom": "^16.8.4",
+    "@types/storybook__addon-info": "^4.1.2",
+    "@types/storybook__addon-viewport": "^4.1.1",
+    "@types/storybook__html": "^5.0.2",
+    "@types/storybook__react": "^4.0.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "clsx": "^1.0.4",
+    "husky": "^2.4.1",
+    "jest": "^24.8.0",
+    "jest-dom": "^3.5.0",
+    "lint-staged": "^8.2.1",
+    "postcss-functions": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.1",
+    "postcss-nested": "^4.1.2",
+    "postcss-preset-env": "^6.6.0",
+    "preact": "^10.0.0-beta.1",
+    "prettier": "^1.18.2",
+    "react-docgen-typescript-loader": "^3.1.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.2",
+    "typescript-plugin-css-modules": "^1.2.0",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-merge": "^4.2.1"
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "src/{name}",
+    "packageManager": "yarn"
+  }
+}

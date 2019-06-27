@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "member-access": false,
+    "interface-name": [true, "never-prefix"],
+    "interface-over-type-literal": false,
+    "no-implicit-dependencies": [true, ["react", "react-dom"]],
+    "no-unused-expression": [true, "allow-new"],
+    "no-submodule-imports": [true, "preact/hooks"]
+  }
+}
