@@ -1,0 +1,36 @@
+.tabs {
+}
+
+.tabs__menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs__header {
+  border: 1px solid #000;
+  color: inherit;
+  display: block;
+  margin-right: -1px;
+  padding: 1em;
+  text-decoration: none;
+
+  &.is-active {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+    z-index: 1;
+  }
+}
+
+.tabs__content {
+  border: 1px solid #000;
+  display: none;
+  margin-top: -1px;
+
+  &.is-active {
+    display: block;
+    padding: 1em;
+  }
+}

@@ -24,7 +24,7 @@ Storybook environments are used for development. Run the storybook script with t
 
 | Script  | Purpose | Options |
 |---------|---|---|
-| storybook | Runs and opens [Storybook](https://storybook.js.org/) on a local server. | -c .storybook/react or -c .storybook/html |
+| start | Runs and opens [Storybook](https://storybook.js.org/) on a local server. | -c .storybook/react or -c .storybook/html |
 | build-storybook  | [Exports](https://storybook.js.org/docs/basics/exporting-storybook/) Storybook as a static app | -c .storybook/react or -c .storybook/html |
 | test  | Runs [jest](https://jestjs.io/). Use additional [options](https://jestjs.io/docs/en/cli) immediately after yarn run test | --watch for watch mode or supply any other from the cli options |
 | build | Runs webpack using the build config | Any webpack cli options |
@@ -45,6 +45,13 @@ If you wish to make your component available to legacy systems, you can use the 
 ```
 yarn run build --output-library-target umd --entry ./src/html/dropdown/ --o ./src/html/dropdown/dist/dropdown-umd.js
 ```
+
+## Decorators
+Certain decorators have been created to allow vanilla JS components to run in storybook:
+
+| Decorator  | Purpose |
+|---------|---|
+| es6Class | Allows instantiation on imported html e.g. html loaded through a require call. Classes are also destroyed and recreated when the story is unselected/reselected to avoid any duplicate window or document event listeners |
 
 ## Publishing
 
