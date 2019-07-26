@@ -1,0 +1,10 @@
+.sticky-header {
+  position: sticky;
+  top: 0;
+  transition: transform var(--anim-fast, 0.4s) var(--anim-decelerate, ease-out);
+  transform: translateY(-100%);
+
+  &.is-sticky {
+    transform: translateY(0);
+  }
+}

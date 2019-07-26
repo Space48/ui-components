@@ -1,0 +1,15 @@
+{
+  "name": "sticky-header",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/throttle-debounce": "^1.1.1",
+    "throttle-debounce": "^2.1.0"
+  }
+}
