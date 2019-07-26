@@ -1,0 +1,34 @@
+.root {
+  border-radius: 3px;
+  padding: 1em 2em;
+  margin: 1em;
+}
+
+.icon {
+  padding: 1em;
+  margin-right: 1em;
+}
+
+.error {
+  background-color: var(--color-msg-error-bg, #ffece6);
+
+  & .icon {
+    background-color: var(--color-msg-error-icon, #fe452c);
+  }
+}
+
+.success {
+  background-color: var(--color-msg-success-bg, #e2f7f0);
+
+  & .icon {
+    background-color: var(--color-msg-success-icon, #61dab1);
+  }
+}
+
+.info {
+  background-color: var(--color-msg-info-bg);
+
+  & .icon {
+    background-color: var(--color-msg-info-icon);
+  }
+}
