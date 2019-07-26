@@ -1,7 +1,4 @@
 module.exports = {
-  resolve: {
-    extensions: ['.pcss'],
-  },
   module: {
     rules: [
       {
@@ -22,14 +19,14 @@ module.exports = {
             loader: require.resolve('postcss-loader'),
             options: {
               ident: 'pcss_postcss',
-              plugins: () => [
-                require('postcss-nested'),
-                require('postcss-preset-env')(),
-              ],
+              plugins: () => [require('postcss-preset-env')({stage: 0})],
             },
           },
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.pcss'],
   },
 };

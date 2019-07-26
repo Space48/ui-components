@@ -1,7 +1,4 @@
 module.exports = {
-  resolve: {
-    extensions: ['.ts', '.tsx'],
-  },
   module: {
     rules: [
       {
@@ -20,5 +17,8 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx'],
   },
 };
