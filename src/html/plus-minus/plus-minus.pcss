@@ -1,0 +1,32 @@
+.plus-minus {
+  border: 1px solid var(--color-border-dark, #000);
+  display: inline-flex;
+}
+
+.plus-minus__button {
+  border: 0;
+  background: inherit;
+  color: inherit;
+  padding: 1em;
+
+  & svg {
+    transform: translateY(0);
+    transition: transform var(--anim-immediate, 0.1s)
+      var(--anim-accelerate, ease-in);
+    min-width: 1em;
+  }
+}
+
+.plus-minus__field {
+  appearance: none;
+  border: 0;
+  max-width: 3em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  text-align: center;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+  }
+}
