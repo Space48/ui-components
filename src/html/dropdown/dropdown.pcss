@@ -1,0 +1,21 @@
+.dropdown {
+  position: relative;
+
+  &.is-active {
+    & .dropdown__content {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.dropdown__content {
+  opacity: 0;
+  padding: var(--grid-y-unit, 1rem) calc(var(--grid-x-unit, 1rem) * 2)
+    calc(var(--grid-y-unit, 1rem) * 2);
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  transform: translateY(calc(var(--grid-x-unit, 1rem) * 1.5));
+  transition: opacity var(--anim-fast, 0.4s) var(--anim-subtle-curve, linear);
+}
