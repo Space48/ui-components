@@ -87,7 +87,8 @@ e.g. bit add src/react/message/* will publish all files for the react message co
 
 Now added, you just need to run the export to push to the remote registry:
 ```
-$ bit export dsbelding.ui-components
+$ bit export <account>.<collection>
+// e.g space48.ui-components
 ```
 Your component should now be available in your collection on bit.dev
 
@@ -97,23 +98,23 @@ Your component should now be available in your collection on bit.dev
 The following are common usage examples for projects:
 
 #### Import dist files
-If you want to install a component that is compatible with a legacy system e.g. AMD or es2015, you can install the components dist files rather than the component itself.
+If you want to install a component that is compatible with a legacy system e.g. AMD or es2015, you can install the components dist files rather than the component itself e.g.
 
 ```
-$ bit import --dist --ignore-package-json -p ./<target directory> dsbelding.ui-components/message
+$ bit import --dist --ignore-package-json -p ./<target directory> <account>.<collection>/message
 ```
 
 #### Import with generated dependencies
 If you want to install a component with it's own package.json and node_modules:
 
 ```
-$ bit import -p ./<target directory> dsbelding.ui-components/message
+$ bit import -p ./<target directory> <account>.<collection>/message
 ```
 
 #### Import without generated dependencies
 If you want to install a component's source files but without automatically generated dependencies:
 ```
-$ bit import --ignore-package-json -p ./<target directory> dsbelding.ui-components/message
+$ bit import --ignore-package-json -p ./<target directory> <account>.<collection>/message
 ```
 
 The components files should now have been written to the target directory you specified.
