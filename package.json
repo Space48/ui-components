@@ -25,9 +25,9 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-transform-react-jsx": "^7.17.3",
     "@storybook/addon-a11y": "^5.1.9",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-info": "^5.1.9",
